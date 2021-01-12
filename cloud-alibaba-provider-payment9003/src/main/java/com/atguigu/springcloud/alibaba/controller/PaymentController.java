@@ -1,5 +1,7 @@
 package com.atguigu.springcloud.alibaba.controller;
 
+import com.atguigu.springcloud.entities.CommonResult;
+import com.atguigu.springcloud.entities.Payment;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +19,7 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
-    public static HashMap<Long,Payment> hashMap = new HashMap<>();
+    public static HashMap<Long, Payment> hashMap = new HashMap<>();
 
     static {
         hashMap.put(1L,new Payment(1L,"28a8c1e3bc2742d8848569891fb42181"));
